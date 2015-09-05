@@ -57,7 +57,6 @@ public class WebcamStateManager : MonoBehaviour {
 		} else {
 			_currentState = WebcamStateEnum.none;
 		}
-		Debug.Log ("Current webcam state : " + _currentState.ToString());
 		//Update the state of the gamer
 		if (_gamerGO != null) {
 			_gamerGO.GetComponent<SpriteRenderer> ().sprite = _gamerSpriteList [_currentState];
