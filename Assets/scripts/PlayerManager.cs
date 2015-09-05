@@ -53,7 +53,7 @@ public class PlayerManager : MonoBehaviour {
 		if (fearPoint != 0 && fearPoint >= _previousFearPoint) {
 			_lastComboTime = Time.time;
 			_combo = true;
-			_viewCount.setMultiplier (1000.0f);
+			_viewCount.setMultiplier (10000.0f);
 		}
 
 		_previousFearPoint = fearPoint;
