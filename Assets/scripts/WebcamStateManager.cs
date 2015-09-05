@@ -61,6 +61,10 @@ public class WebcamStateManager : MonoBehaviour {
 		return _currentState;
 	}
 
+	public void setState(WebcamStateEnum state){
+		_loopAnimatior.CrossFade (state.ToString (), 0f);
+	}
+
 	public void changeSpeed(float newSpeed){
 		if(_loopAnimatior != null) {
 			_loopAnimatior.speed = newSpeed;
