@@ -62,45 +62,45 @@ public class VideoGameScreen : MonoBehaviour {
 
 		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_CHAIR] = 0;
 		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_SCREAM] = 0;
-		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_WHISPER] = 0;
-		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_BOARD] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_CABLE] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_CAT] = 2;
+		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_WHISPER] = 1;
+		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_BOARD] = 0;
+		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_CABLE] = 2;
+		_actionsValues [VideoGameScreenEnum.VGS_CORRIDOR] [GameActionEnum.GA_CAT] = 0;
 		
-		_actionsValues [VideoGameScreenEnum.VGS_ELEVATOR] [GameActionEnum.GA_CHAIR] = 0;
+		_actionsValues [VideoGameScreenEnum.VGS_ELEVATOR] [GameActionEnum.GA_CHAIR] = 2;
 		_actionsValues [VideoGameScreenEnum.VGS_ELEVATOR] [GameActionEnum.GA_SCREAM] = 0;
 		_actionsValues [VideoGameScreenEnum.VGS_ELEVATOR] [GameActionEnum.GA_WHISPER] = 0;
 		_actionsValues [VideoGameScreenEnum.VGS_ELEVATOR] [GameActionEnum.GA_BOARD] = 1;
 		_actionsValues [VideoGameScreenEnum.VGS_ELEVATOR] [GameActionEnum.GA_CABLE] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_ELEVATOR] [GameActionEnum.GA_CAT] = 2;
+		_actionsValues [VideoGameScreenEnum.VGS_ELEVATOR] [GameActionEnum.GA_CAT] = 0;
 		
 		_actionsValues [VideoGameScreenEnum.VGS_MONSTER] [GameActionEnum.GA_CHAIR] = 0;
-		_actionsValues [VideoGameScreenEnum.VGS_MONSTER] [GameActionEnum.GA_SCREAM] = 0;
+		_actionsValues [VideoGameScreenEnum.VGS_MONSTER] [GameActionEnum.GA_SCREAM] = 1;
 		_actionsValues [VideoGameScreenEnum.VGS_MONSTER] [GameActionEnum.GA_WHISPER] = 0;
 		_actionsValues [VideoGameScreenEnum.VGS_MONSTER] [GameActionEnum.GA_BOARD] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_MONSTER] [GameActionEnum.GA_CABLE] = 1;
+		_actionsValues [VideoGameScreenEnum.VGS_MONSTER] [GameActionEnum.GA_CABLE] = 0;
 		_actionsValues [VideoGameScreenEnum.VGS_MONSTER] [GameActionEnum.GA_CAT] = 2;
 		
 		_actionsValues [VideoGameScreenEnum.VGS_LITTLE_GIRL] [GameActionEnum.GA_CHAIR] = 0;
 		_actionsValues [VideoGameScreenEnum.VGS_LITTLE_GIRL] [GameActionEnum.GA_SCREAM] = 0;
-		_actionsValues [VideoGameScreenEnum.VGS_LITTLE_GIRL] [GameActionEnum.GA_WHISPER] = 0;
+		_actionsValues [VideoGameScreenEnum.VGS_LITTLE_GIRL] [GameActionEnum.GA_WHISPER] = 2;
 		_actionsValues [VideoGameScreenEnum.VGS_LITTLE_GIRL] [GameActionEnum.GA_BOARD] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_LITTLE_GIRL] [GameActionEnum.GA_CABLE] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_LITTLE_GIRL] [GameActionEnum.GA_CAT] = 2;
+		_actionsValues [VideoGameScreenEnum.VGS_LITTLE_GIRL] [GameActionEnum.GA_CABLE] = 0;
+		_actionsValues [VideoGameScreenEnum.VGS_LITTLE_GIRL] [GameActionEnum.GA_CAT] = 0;
 		
-		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_CHAIR] = 0;
-		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_SCREAM] = 0;
+		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_CHAIR] = 1;
+		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_SCREAM] = 2;
 		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_WHISPER] = 0;
 		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_BOARD] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_CABLE] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_CAT] = 2;
+		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_CABLE] = 0;
+		_actionsValues [VideoGameScreenEnum.VGS_BANSHEE] [GameActionEnum.GA_CAT] = 1;
 		
 		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_CHAIR] = 0;
-		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_SCREAM] = 0;
-		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_WHISPER] = 0;
-		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_BOARD] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_CABLE] = 1;
-		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_CAT] = 2;
+		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_SCREAM] = 1;
+		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_WHISPER] = 1;
+		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_BOARD] = 2;
+		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_CABLE] = 0;
+		_actionsValues [VideoGameScreenEnum.VGS_DOOR] [GameActionEnum.GA_CAT] = 0;
 	}
 
 	// Update is called once per frame
