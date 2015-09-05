@@ -166,7 +166,7 @@ MonoBehaviour:
   MonsterImage: {fileID: 21300000, guid: 49dea03482b5e8f488dd5325c01d1c9b, type: 3}
   BansheeImage: {fileID: 21300000, guid: ee2692bb2f5c59847b47724aa17d0f1c, type: 3}
   DoorImage: {fileID: 21300000, guid: 360dddfa2b3da5f47abb6351ddca5534, type: 3}
-  InitialScreenDuration: 3
+  InitialScreenDuration: 10
   Acceleration: 1
 --- !u!1 &268525638
 GameObject:
@@ -1130,6 +1130,10 @@ Prefab:
     - target: {fileID: 11470820, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: ActionType
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
