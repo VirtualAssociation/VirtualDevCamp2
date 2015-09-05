@@ -1205,7 +1205,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -94.8000031, y: 40}
+  m_AnchoredPosition: {x: -105.300003, y: 42.2000008}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &1190817780
@@ -1217,7 +1217,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: AnimationSprites.Array.size
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 22406946, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1298,27 +1298,27 @@ Prefab:
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: AnimationSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: a42b4a4acf2aeec409c364ba20a7d423,
+      objectReference: {fileID: 21300000, guid: 5b23813f0fa9c8742a4ca3a51dd649f1,
         type: 3}
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: AnimationSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: c544071b84610c04fa82cada11056b98,
+      objectReference: {fileID: 21300000, guid: 405573c61cfeccc49b85b9fb254c63ed,
         type: 3}
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: AnimationSprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 5cf374923a9f3004fb0b2bf5d35596a6,
+      objectReference: {fileID: 21300000, guid: 28293c3f8912ae4408878df10ecbd659,
         type: 3}
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: AnimationSprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 3423973a4eded634db9b72844f100c09,
+      objectReference: {fileID: 21300000, guid: c39c92b9c6658bf43bd33aadc24e703a,
         type: 3}
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: AnimationSprites.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: f1fee4c06079d1449ab9aa1b94e43d15,
+      objectReference: {fileID: 21300000, guid: c45e7e2635bf8184086e191bd98a6381,
         type: 3}
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: ActingAnimationPosition.x
@@ -1342,8 +1342,28 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: FrameDuration
-      value: .5
+      value: .300000012
       objectReference: {fileID: 0}
+    - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: AnimationSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 405573c61cfeccc49b85b9fb254c63ed,
+        type: 3}
+    - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: AnimationSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 28293c3f8912ae4408878df10ecbd659,
+        type: 3}
+    - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: AnimationSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: c39c92b9c6658bf43bd33aadc24e703a,
+        type: 3}
+    - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: AnimationSprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: c45e7e2635bf8184086e191bd98a6381,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
   m_IsPrefabParent: 0
@@ -1754,7 +1774,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 131.100006, y: 27.5}
+  m_AnchoredPosition: {x: 120.599998, y: 27.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1801630454
@@ -1772,7 +1792,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
