@@ -15,6 +15,7 @@ public class VideoGameScreen : MonoBehaviour {
 	public float InitialScreenDuration = 2.0f;
 	public float Acceleration = 0.01f;
 	private float _currentTime;
+	private float _startTime;
 	private float _currentScreenDuration;
 
 	private VideoGameScreenEnum _currentVideoScreenView;
@@ -43,6 +44,7 @@ public class VideoGameScreen : MonoBehaviour {
 		SetupActionsValues ();
 
 		_currentTime = 0.0f;
+		_startTime = Time.time;
 		_currentScreenDuration = InitialScreenDuration;
 	}
 
@@ -104,6 +106,9 @@ public class VideoGameScreen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+		if (Time.time - _startTime >= 120.0f)
+			return;
+
 		if (Time.time - _currentTime > _currentScreenDuration) {
 
 			int newIndex = _currentImageIndex;
@@ -117,6 +122,13 @@ public class VideoGameScreen : MonoBehaviour {
 			_currentScreenDuration = InitialScreenDuration - Time.time / 60.0f * Acceleration; // Fixé pour une durée de 2min.
 			Debug.Log (_currentScreenDuration);
 		}
+
+		// Update Youtube Bar
+		GameObject bar = GameObject.Find ("YoutubeBar");
+		RectTransform rect = bar.GetComponent<RectTransform> ();
+		int barTotalWidth = 364;
+		int w = (int)(barTotalWidth * ((Time.time - _startTime) / 120.0f));
+		rect.sizeDelta = new Vector2(w, rect.sizeDelta[1]);
 			
 
 	}
