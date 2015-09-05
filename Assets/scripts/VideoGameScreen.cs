@@ -5,16 +5,22 @@ using System.Collections.Generic;
 
 public class VideoGameScreen : MonoBehaviour {
 
-	public Image CorridorImage;
-	public Image ElevatorImage;
-	public Image LittleGirlImage;
-	public Image MonsterImage;
-	public Image BansheeImage;
-	public Image DoorImage;
+	public Sprite CorridorImage;
+	public Sprite ElevatorImage;
+	public Sprite LittleGirlImage;
+	public Sprite MonsterImage;
+	public Sprite BansheeImage;
+	public Sprite DoorImage;
 
-	public int StartingInterval = 3;
+	public float InitialScreenDuration = 2.0f;
+	public float Acceleration = 0.01f;
+	private float _currentTime;
+	private float _currentScreenDuration;
 
 	private VideoGameScreenEnum _currentVideoScreenView;
+	private Sprite[] _sprites;
+	private int _currentImageIndex;
+	private Image _currentImage;
 
 	private Dictionary<VideoGameScreenEnum, Dictionary<GameActionEnum, int>> _actionsValues;
 
@@ -23,7 +29,21 @@ public class VideoGameScreen : MonoBehaviour {
 	{
 		_currentVideoScreenView = VideoGameScreenEnum.VGS_CORRIDOR;
 
+		_sprites = new Sprite[6];
+		_sprites [0] = CorridorImage;
+		_sprites [1] = ElevatorImage;
+		_sprites [2] = LittleGirlImage;
+		_sprites [3] = MonsterImage;
+		_sprites [4] = BansheeImage;
+		_sprites [5] = DoorImage;
+		_currentImageIndex = 0;
+		_currentImage = GetComponent<Image> ();
+		UpdateCurrentImage ();
+
 		SetupActionsValues ();
+
+		_currentTime = 0.0f;
+		_currentScreenDuration = InitialScreenDuration;
 	}
 
 	void SetupActionsValues()
@@ -84,10 +104,26 @@ public class VideoGameScreen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+		if (Time.time - _currentTime > _currentScreenDuration) {
 
-		int newIndex = (int)(Time.time / StartingInterval);
-		Debug.Log (newIndex);
+			int newIndex = _currentImageIndex;
+			do {
+				newIndex = (int)(Mathf.Floor(Random.Range(0.0f, 5.999f)));
+			}
+			while(newIndex == _currentImageIndex);
+			_currentImageIndex = newIndex;
+			UpdateCurrentImage ();
+			_currentTime = Time.time;
+			_currentScreenDuration = InitialScreenDuration - Time.time / 60.0f * Acceleration; // Fixé pour une durée de 2min.
+			Debug.Log (_currentScreenDuration);
+		}
+			
 
+	}
+
+	void UpdateCurrentImage()
+	{
+		_currentImage.sprite = _sprites[_currentImageIndex];
 	}
 
 
