@@ -23,7 +23,7 @@ public class ViewCount : MonoBehaviour{
 		_viewDisplay.text = Mathf.Floor(_views).ToString ();
 	}
 
-	void addViews(int viewNumber){
+	public void addViews(int viewNumber){
 		_views = _views + viewNumber;
 	}
 }
