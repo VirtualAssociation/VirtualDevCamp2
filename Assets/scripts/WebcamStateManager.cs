@@ -22,8 +22,8 @@ public class WebcamStateManager : MonoBehaviour {
 		Sprite littleFearSprite = Resources.Load<Sprite> ("Gamer/gamer_fear_medium") as Sprite;
 		Sprite idle1 = Resources.Load<Sprite> ("Gamer/gamer_idle_f1");
 		Sprite idle2 = Resources.Load<Sprite> ("Gamer/gamer_idle_f2") as Sprite;
-		Sprite nope1 = Resources.Load<Sprite> ("Gamer/gamer_nope_1") as Sprite;
-		Sprite nope2 = Resources.Load<Sprite> ("Gamer/gamer_nope_2") as Sprite;
+		Sprite nope1 = Resources.Load<Sprite> ("Gamer/gamer_nope_left") as Sprite;
+		Sprite nope2 = Resources.Load<Sprite> ("Gamer/gamer_nope_rigth") as Sprite;
 
 		_gamerSpriteList.Add (WebcamStateEnum.bigfear, bigFearSprite);
 		_gamerSpriteList.Add (WebcamStateEnum.littlefear, littleFearSprite);
@@ -44,7 +44,6 @@ public class WebcamStateManager : MonoBehaviour {
 			_currentState = WebcamStateEnum.idle1;
 		} else if (state.shortNameHash == Animator.StringToHash (WebcamStateEnum.idle2.ToString ())) {
 			_currentState = WebcamStateEnum.idle2;
-			setState(WebcamStateEnum.bigfear);
 		} else if (state.shortNameHash == Animator.StringToHash (WebcamStateEnum.littlefear.ToString ())) {
 			_currentState = WebcamStateEnum.littlefear;
 		} else if (state.shortNameHash == Animator.StringToHash (WebcamStateEnum.bigfear.ToString ())) {
