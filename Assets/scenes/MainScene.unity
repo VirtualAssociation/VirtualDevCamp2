@@ -761,12 +761,12 @@ Prefab:
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: AnimationSprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: f27a6a711d3c66c4e8601c1ccece9356,
+      objectReference: {fileID: 21300000, guid: 0aa904dac4fe91440aa4dbe1e8ab5c8e,
         type: 3}
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: AnimationSprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: f27a6a711d3c66c4e8601c1ccece9356,
+      objectReference: {fileID: 21300000, guid: f05d8beee55c32e4bb874fe903afbcfc,
         type: 3}
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: AnimationSprites.Array.data[4]
