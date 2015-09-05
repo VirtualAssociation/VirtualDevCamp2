@@ -14,14 +14,11 @@ public class ViewCount : MonoBehaviour{
 		_bonusMult = 20.0f;
 		_views = 1;
 		_viewDisplay = GameObject.Find ("NumberOfViews").GetComponent<UnityEngine.UI.Text> ();
-		if(_viewDisplay == null)
-			Debug.Log ("display is null");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Time.time >= _nextTimeToResetMult) {
-			Debug.Log("reset mult");
 			_bonusMult = 20.0f;
 		}
 		_views =  _views + Time.deltaTime * _bonusMult;
