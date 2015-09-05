@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum StateEnum{
+public enum WebcamStateEnum{
 	none = 0, // default
-	plop = 1, 
-	patafoin = 2, 
-	pif = 3, 
-	pouf = 4, 
-	patapon = 5, 
+	idle1 = 1, 
+	idle2 = 2, 
+	littlefear = 3, 
+	bigfear = 4, 
+	bad = 5, 
+	bad2 = 6
 	
 }
