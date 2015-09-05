@@ -438,11 +438,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22406946, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -64
+      value: -62
       objectReference: {fileID: 0}
     - target: {fileID: 22406946, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 12.5
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 22406946, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: m_SizeDelta.x
@@ -511,11 +511,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22406946, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: m_LocalScale.x
-      value: .200000003
+      value: .300000012
       objectReference: {fileID: 0}
     - target: {fileID: 22406946, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: m_LocalScale.y
-      value: .200000003
+      value: .300000012
       objectReference: {fileID: 0}
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: NumberOfLoops
@@ -616,7 +616,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22406946, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -35.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 22406946, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -717,6 +717,10 @@ Prefab:
     - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
       propertyPath: ActionType
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470820, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
@@ -1018,6 +1022,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
+  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
