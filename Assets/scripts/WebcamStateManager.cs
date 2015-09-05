@@ -8,7 +8,6 @@ public class WebcamStateManager : MonoBehaviour {
 	private Animator _loopAnimatior;
 	private GameObject _gamerGO;
 	private WebcamStateEnum _currentState;
-	private int _level = 0;
 	private float hSliderValue = 0.1f;
 	private Dictionary<WebcamStateEnum, Sprite> _gamerSpriteList;
 

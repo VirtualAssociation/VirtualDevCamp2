@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class GameEvent : MonoBehaviour {
 
+	public GameActionEnum ActionType;
 	public Sprite[] AnimationSprites;
 	public int NumberOfLoops = 10;
 	public float FrameDuration = 0.2f;
@@ -68,6 +69,8 @@ public class GameEvent : MonoBehaviour {
 	public void StartAnimation()
 	{
 		_animDone = false;
+		VideoGameScreen screen = (VideoGameScreen)(GameObject.Find ("VideoGameScreen").GetComponent ("VideoGameScreen"));
+		screen.ApplyEvent (ActionType);
 	}
 
 	void StopAnimation()

@@ -23,4 +23,9 @@ public class PlayerManager : MonoBehaviour {
 		_viewCount.addViews (numberOfViews);
 	}
 
+	public void addFearPoint(int fearPoint)
+	{
+		Debug.Log (fearPoint);
+	}
+
 }
