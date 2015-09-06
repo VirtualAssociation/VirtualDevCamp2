@@ -7,6 +7,7 @@ public class ViewCount : MonoBehaviour{
 	private float _nextTimeToResetMult;
 	private UnityEngine.UI.Text _viewDisplay;
 	private GameObject _winningScreen;
+	private bool _isStopped = false;
 
 	public float _bonusMult;
 
@@ -21,16 +22,26 @@ public class ViewCount : MonoBehaviour{
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time >= _nextTimeToResetMult) {
-			_bonusMult = 20.0f;
-		}
-		_views =  _views + Time.deltaTime * _bonusMult;
-		_viewDisplay.text = Mathf.Floor(_views).ToString ();
+		if (!_isStopped) {
+			if (Time.time >= _nextTimeToResetMult) {
+				_bonusMult = 20.0f;
+			}
+			_views = _views + Time.deltaTime * _bonusMult;
+			_viewDisplay.text = Mathf.Floor (_views).ToString ();
 
-		if(_views >= 2345678){
-			Debug.Log("Win");
-			win();
+			if (_views >= 2345678) {
+				Debug.Log ("Win");
+				win ();
+			}
 		}
+	}
+
+	public string getViews(){
+		return Mathf.Floor(_views).ToString ();
+	}
+
+	public void stopCount(){
+		_isStopped = true;
 	}
 
 	public void setMultiplier(float mult){
@@ -39,7 +50,7 @@ public class ViewCount : MonoBehaviour{
 	}
 
 	public void win(){
-		GameObject.Find ("MainCamera").GetComponent<AudioSource> ().Stop ();
+		GameObject.Find ("Main Camera").GetComponent<AudioSource> ().Stop ();
 		_winningScreen.SetActive (true);
 	}
 
