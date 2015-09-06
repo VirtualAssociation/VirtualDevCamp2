@@ -40,11 +40,11 @@ public class PlayerManager : MonoBehaviour {
 			_webcamStateManager.setState(WebcamStateEnum.bad);
 			break;
 		case 1:
-			_viewCount.setMultiplier (150.0f);
+			_viewCount.setMultiplier (500.0f);
 			_webcamStateManager.setState(WebcamStateEnum.littlefear);
 			break;
 		case 2:
-			_viewCount.setMultiplier (250.0f);
+			_viewCount.setMultiplier (1000.0f);
 			_webcamStateManager.setState(WebcamStateEnum.bigfear);
 			break;
 		}
@@ -53,7 +53,7 @@ public class PlayerManager : MonoBehaviour {
 		if (fearPoint != 0 && fearPoint >= _previousFearPoint) {
 			_lastComboTime = Time.time;
 			_combo = true;
-			_viewCount.setMultiplier (10000.0f);
+			_viewCount.setMultiplier (100000.0f);
 		}
 
 		_previousFearPoint = fearPoint;
