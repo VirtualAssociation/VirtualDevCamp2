@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -68,18 +67,6 @@ public class WebcamStateManager : MonoBehaviour {
 			_gamerGO.SetActive(false);
 			_gamerNope.SetActive(true);
 		}
-	}
-
-	public float getTotalLenghtOfClips(){
-		float length = 0.0f;
-		if(_loopAnimatior != null) {
-			UnityEditor.Animations.AnimatorController ac = _loopAnimatior.runtimeAnimatorController as UnityEditor.Animations.AnimatorController;
-			AnimationClip[] clips = ac.animationClips;
-			for(int i = 0; i < clips.Length; i++) {
-				length += clips[i].length;
-			}
-		}
-		return length;
 	}
 
 	public WebcamStateEnum getCurrentState(){
