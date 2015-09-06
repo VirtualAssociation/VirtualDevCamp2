@@ -1211,6 +1211,18 @@ Prefab:
       propertyPath: NumberOfLoops
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11467742, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1096678826}
+    - target: {fileID: 11467742, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMouseOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467742, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
   m_IsPrefabParent: 0
@@ -1219,6 +1231,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22406946, guid: 90bfb897cbfbb5940839dd40e616499d,
     type: 2}
   m_PrefabInternal: {fileID: 932173064}
+--- !u!114 &1096678826 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d,
+    type: 2}
+  m_PrefabInternal: {fileID: 932173064}
+  m_Script: {fileID: 11500000, guid: ad7b01b31c0673647aaeaf2f73c46a2f, type: 3}
 --- !u!1 &1097607530
 GameObject:
   m_ObjectHideFlags: 0

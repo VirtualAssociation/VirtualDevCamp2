@@ -4,12 +4,14 @@ using UnityEngine.UI;
 
 public class GameEvent : MonoBehaviour {
 
+
 	public GameActionEnum ActionType;
 	public Sprite[] AnimationSprites;
 	public int NumberOfLoops = 10;
 	public float FrameDuration = 0.2f;
 	public Vector3 ActingAnimationPosition;
 
+	private Texture2D _cursorTexture;
 	private int _currentLoop, _currentFrame, _frameCount;
 	private float _currentTime;
 	private bool _animDone = true;
@@ -23,6 +25,8 @@ public class GameEvent : MonoBehaviour {
 
 		_image = GetComponent<Image>();
 		UpdateImage ();
+
+		_cursorTexture = Resources.Load ("cursor") as Texture2D;
 
 		_initialPosition = GetComponent<Transform> ().position;
 	}
@@ -99,6 +103,14 @@ public class GameEvent : MonoBehaviour {
 	void DoEventAction()
 	{
 		Debug.Log ("Player is clicking on " + "");
+	}
+
+	public void OnMouseOver(){
+		Cursor.SetCursor(_cursorTexture, Vector2.zero, CursorMode.Auto);
+	}
+
+	public void OnMouseExit(){
+		Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 	}
 
 

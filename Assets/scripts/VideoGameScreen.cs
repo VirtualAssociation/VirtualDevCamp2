@@ -120,7 +120,6 @@ public class VideoGameScreen : MonoBehaviour {
 			UpdateCurrentImage ();
 			_currentTime = Time.time;
 			_currentScreenDuration = InitialScreenDuration - Time.time / 60.0f * Acceleration; // Fixé pour une durée de 2min.
-			Debug.Log (_currentScreenDuration);
 		}
 
 		// Update Youtube Bar
