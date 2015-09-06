@@ -874,6 +874,10 @@ Prefab:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11472364, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
+      propertyPath: FrameDuration
+      value: .150000006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90bfb897cbfbb5940839dd40e616499d, type: 2}
   m_IsPrefabParent: 0
