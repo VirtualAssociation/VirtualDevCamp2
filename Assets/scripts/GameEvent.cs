@@ -11,6 +11,7 @@ public class GameEvent : MonoBehaviour {
 	public float FrameDuration = 0.2f;
 	public Vector3 ActingAnimationPosition;
 
+	private GameObject _catIdle;
 	private Texture2D _cursorTexture;
 	private int _currentLoop, _currentFrame, _frameCount;
 	private float _currentTime;
@@ -27,7 +28,11 @@ public class GameEvent : MonoBehaviour {
 		UpdateImage ();
 
 		_cursorTexture = Resources.Load ("cursor") as Texture2D;
-
+		if (ActionType == GameActionEnum.GA_CAT) {
+			_catIdle = GameObject.Find ("cat_idle");
+			_image.color = new Color(_image.color.r, _image.color.g, _image.color.b, 0); 
+			_catIdle.SetActive (true);
+		}
 		_initialPosition = GetComponent<Transform> ().position;
 	}
 
@@ -72,6 +77,11 @@ public class GameEvent : MonoBehaviour {
 
 	public void StartAnimation()
 	{
+
+		if (ActionType == GameActionEnum.GA_CAT) {
+			_image.color = new Color(_image.color.r, _image.color.g, _image.color.b,1); 
+			_catIdle.SetActive(false);
+		}
 		_animDone = false;
 		VideoGameScreen screen = (VideoGameScreen)(GameObject.Find ("VideoGameScreen").GetComponent ("VideoGameScreen"));
 		screen.ApplyEvent (ActionType);
@@ -79,6 +89,10 @@ public class GameEvent : MonoBehaviour {
 
 	void StopAnimation()
 	{
+		if (ActionType == GameActionEnum.GA_CAT) {
+			_image.color = new Color(_image.color.r, _image.color.g, _image.color.b, 0); 
+			_catIdle.SetActive(true);
+		}
 		_animDone = true;
 		_currentFrame = 0;
 		_currentLoop = 0;
