@@ -5,7 +5,8 @@ using System.Collections.Generic;
 
 
 public class WebcamStateManager : MonoBehaviour {
-	
+
+	private GameObject _gamerNope;
 	private Animator _loopAnimatior;
 	private GameObject _gamerGO;
 	private WebcamStateEnum _currentState;
@@ -16,6 +17,8 @@ public class WebcamStateManager : MonoBehaviour {
 		_gamerGO = GameObject.Find ("GamerAnim");
 		_loopAnimatior = GameObject.Find ("WebcamAnim").GetComponent<Animator>();
 		_currentState = WebcamStateEnum.none;
+		_gamerNope = GameObject.Find ("gamer_nope");
+		_gamerNope.SetActive(false);
 
 		//Load the sprite for the gamer
 		_gamerSpriteList = new Dictionary<WebcamStateEnum, Sprite> ();
@@ -57,10 +60,13 @@ public class WebcamStateManager : MonoBehaviour {
 			_currentState = WebcamStateEnum.none;
 		}
 		//Update the state of the gamer
-		if (_gamerGO != null) {
+		if (_gamerGO != null && _currentState != WebcamStateEnum.bad) {
+			_gamerGO.SetActive(true);
+			_gamerNope.SetActive(false);
 			_gamerGO.GetComponent<SpriteRenderer> ().sprite = _gamerSpriteList [_currentState];
-		} else {
-			Debug.Log("gamer is null");
+		} else if(_gamerGO != null && _currentState == WebcamStateEnum.bad) {
+			_gamerGO.SetActive(false);
+			_gamerNope.SetActive(true);
 		}
 	}
 
