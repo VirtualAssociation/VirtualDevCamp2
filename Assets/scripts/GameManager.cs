@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 		if (Time.time >= chrono) {
 			TimeEnd();
 		}
+
+		if (Input.GetKeyDown (KeyCode.Escape))
+			TimeEnd ();
 	}
 
 
