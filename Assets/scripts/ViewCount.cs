@@ -39,7 +39,7 @@ public class ViewCount : MonoBehaviour{
 	}
 
 	public void win(){
-		GameObject mainCamera = GameObject.Find ("MainCamera").GetComponent<AudioSource> ().Stop ();
+		GameObject.Find ("MainCamera").GetComponent<AudioSource> ().Stop ();
 		_winningScreen.SetActive (true);
 	}
 
